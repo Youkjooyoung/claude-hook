@@ -63,7 +63,7 @@ https://github.com/Youkjooyoung/claude-hook/blob/main/hooks/notify-done.ps1
 `notify-done.ps1` (이벤트: `Stop`)
 
 ### 훅 설명
-Claude 답변이 끝나면 화면 중앙에 작업 폴더 이름이 적힌 알림창을 띄우고, 5초 뒤 자동으로 닫습니다. Windows 전용이고, 백그라운드로 실행되어 작업을 늦추지 않습니다.
+Claude 답변이 끝나면 화면 왼쪽 아래에 작업 폴더 이름이 적힌 작은 알림창을 띄우고, 3초 뒤 자동으로 닫습니다. Windows 전용이고, 백그라운드로 실행되어 작업을 늦추지 않습니다.
 
 ### 훅 설치 명령어
 ```powershell
@@ -77,7 +77,7 @@ Copy-Item hooks\notify-done.ps1 "$HOME\.claude\hooks\"
 ### 훅 사용 예시
 ```
 사용자: 이 코드 리뷰해줘   (질문 후 다른 창에서 작업)
-→ Claude 답변이 끝나면 화면 중앙에 민트색 알림창이 뜨고 5초 뒤 사라짐
+→ Claude 답변이 끝나면 화면 왼쪽 아래에 민트색 알림창이 뜨고 3초 뒤 사라짐
 ```
 
 ---
