@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Users/<사용자>/anaconda3/envs/py311/python.exe\" -X utf8 C:/Users/<사용자>/.claude/hooks/block-secrets.py",
+            "timeout": 30,
+            "statusMessage": "민감 정보 검사 중..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File C:/Users/<사용자>/.claude/hooks/notify-done.ps1",
+            "async": true,
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
